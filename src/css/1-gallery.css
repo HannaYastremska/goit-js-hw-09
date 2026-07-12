@@ -1,0 +1,47 @@
+/* --- Специфічні стилі для Завдання 1: Галерея --- */
+.gallery {
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: repeat(3, 360px);
+  grid-gap: 24px;
+  padding: 24px 156px;
+  margin: 0 auto;
+  list-style: none;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-image:hover {
+  transform: scale(1.04);
+}
+
+/* --- Налаштування підписів під фото у модалці SimpleLightbox --- */
+.sl-wrapper .sl-image .sl-caption {
+  background: rgba(46, 47, 66, 0.8) !important;
+  color: #fcfcfc !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 12px 16px;
+  text-align: left;
+}
